@@ -18,6 +18,24 @@ public class binaryTree<typeOfValue> {    //Dublicates not allowed in this reali
         System.out.println("Узла с таким ключом("+key+ ") нету.");
         return null;
     }
+
+    //------------------------------------------------------------------------------------
+    Node recSearch(Node curr,int what){
+        if(curr == null){
+            System.out.println("Узла с таким ключом("+what+ ") нету.");
+            return null;
+        }
+        if(curr.getKey() == what ){
+            System.out.println("Узел с ключом "+what+" найден. Его значение = "+curr.getValue());
+            return curr;
+        }
+        if(what > curr.getKey()){
+            recSearch(curr.rightChild,what);
+        }else{
+            recSearch(curr.leftChild,what);
+        }
+        return null;
+    }
     //------------------------------------------------------------------------------------
     Node insert(int key, typeOfValue what){
         if(root == null){

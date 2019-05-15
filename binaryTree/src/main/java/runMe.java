@@ -32,6 +32,10 @@ public class runMe {
         tree.delete(7);
         tree.delete(-20);
         tree.showAllSimmetric(tree.root);
+        tree.recSearch(tree.root,1111);
+        tree.recSearch(tree.root,0);
+        tree.recSearch(tree.root,-6);
+
 
 
     }
